@@ -1,25 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User</title>
-  <link rel="stylesheet" href="/css/index.css">
+	<title>AGORA</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script type="text/x-handlebars-template" src="../tweet-template.handlebars.hbs"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 </head>
-
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User
-    </h1>
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-</body>
+<header>
+	<div id="header">
+		<div class="About"> 
+			<h1>AGORA</h1>
+		</div>
+		<div class="socialButtons">
+			<a class="facebook" href="https://www.facebook.com">f</a>
+			<a class="linkedin" href="https://www.linkedin.com">in</a>
+			
+		</div>	
+    </div>	
 
+</header>
+<div id="wrapall">
+	<div id="sidebar">
+		
+				<aside>
+					<div>some info <img src="./00000.jpg"> </div>
+					<div>some info <img src="./00000.jpg"> </div>
+				</aside>
+	</div>
+	<div id="main">
+		<section id="page">
+			<main>
+
+				<div id="tweet-form">
+					<textarea id="tweet-text" placeholder="What's on your mind?..."></textarea>
+					<button id="tweet-button">Tweet</button>
+				</div>
+				<div id="timeline">
+				</div>
+
+				<article class="Post1" class="Post1">
+					<img src="./00000.jpg" class="float-left section-img" />
+					<h2>My first post</h2>
+					<p>
+						My first post  
+					</p>
+				</article>
+				
+				
+				<article id="Post2" class="Post2">
+					<img src="./00000.jpg" class="float-right section-img" />
+					<h2>My second post</h2>
+					<p>
+						Here will be my second post 
+					</p>
+				</article>
+			
+			</main>			
+
+		</section>
+	</div>
+</div>
+<script src="../../public/app.js"></script>
+</body>
 </html>
+
+
+
