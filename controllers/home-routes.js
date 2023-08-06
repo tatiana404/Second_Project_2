@@ -7,31 +7,46 @@ const { User } = require('../models');
 //   res.render('login')
 //   // res.sendStatus(200)
 // });
+// router.get("/", async (req, res) => {
+//   try {
+//       const postData = await Post.findAll({
+//           //joins table
+//           include: [
+//               {
+//                   model: User,
+//                   attributes: ["id", "username"],
+//               },
+//           ],
+//           order: [["createdAt", "DESC"]],
+//       });
+//     } catch (err) {
+//       res.status(500).json(err);
+//   }
+// });
 
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['first_name', 'ASC']],
+      model: User,
+      attributes: ["id", "username"],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
-      users
+      users,
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/login', (req, res) => {
-  console.log(req)
-  if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }
-  res.render('login');
+router.get("/", async (req, res) => {
+  res.render("signup", {
+    loggedIn: req.session.loggedIn,
+    loggedInUserData: req.session.loggedInUserData,
+  });
 });
 
 module.exports = router;

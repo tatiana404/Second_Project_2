@@ -1,0 +1,17 @@
+[
+  {
+      "username": "David Gueta",
+      "email": "david.gueta@gmail.com",
+      "password": "12345"
+  },
+  {
+      "username": "Wu Tang",
+      "email": "wutang@gmail.com",
+      "password": "12345"
+  },
+  {
+      "username": "Luke Skywalker",
+      "email": "luke.kywalker@gmail.com",
+      "password": "12345"
+  }
+]

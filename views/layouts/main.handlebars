@@ -10,12 +10,16 @@
 </head>
 
 <body>
-<div class="container" id="container">
-    <div class="form-container">
-        {{{body}}}
-    </div>
-</div>
-</main>
+  <nav>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{/if}}
+  </nav>
+      {{{body}}}
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
 </body>
 
 </html>
