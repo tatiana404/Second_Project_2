@@ -1,7 +1,7 @@
 {
   "name": "user-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "With a team, we have to conceive and execute a design of Interactive Full-Stack Application tWith your team. In creating our first collaborative full-stack application, we've combined a robust back end—with servers, databases, advanced APIs, and user authentication—to an intuitive front end. We are continue building on the agile development methodologies we've used throughout this course, like storing project code in GitHub, managing your work with a project management tool, and implementing feature and bug fixes using the Git branch workflow and pull requests.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
