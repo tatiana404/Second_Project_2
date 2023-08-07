@@ -11,6 +11,16 @@
 
 </head>
 <body>
+  <nav>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{/if}}
+  </nav>
+      {{{body}}}
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
 
 <header>
 	<div id="header">
