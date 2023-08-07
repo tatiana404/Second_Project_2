@@ -2,6 +2,7 @@ const { User } = require('../models');
 
 const userdata =[
   {
+    "id": "0001",
     "first_name": "Dan",
     "last_name": "Balan",
     "user_location": "-104.9847, 39.73915",
@@ -15,6 +16,7 @@ const userdata =[
     "password": "password12345"
   },
   {
+    "id": "0002",
     "first_name": "Daniel",
     "last_name": "Stern",
     "user_location": "-104.9847, 39.73915",
@@ -28,6 +30,7 @@ const userdata =[
     "password": "password12345"
   },
   {
+    "id": "0003",
     "first_name": "Michael",
     "last_name": "Vern",
     "user_location": "-104.9847, 39.73915",

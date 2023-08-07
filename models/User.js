@@ -11,7 +11,8 @@ class User extends Model {
 User.init(
   {
     id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
@@ -33,7 +34,7 @@ User.init(
     number_following: {
       type: DataTypes.DECIMAL(10, 2),
     },
-    umber_tweets: {
+    number_tweets: {
       type: DataTypes.DECIMAL(10, 2),
     },
     number_replies: {

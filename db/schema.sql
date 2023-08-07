@@ -4,7 +4,7 @@ Create DATABASE inventory_db;
 USE inventory_db;
 
 CREATE TABLE user (
-    id INT PRIMARY KEY
+    id CHAR(36) PRIMARY KEY
     first_name VARCHAR(15)
     last_name VARCHAR(15)
     user_location INT
@@ -17,7 +17,7 @@ CREATE TABLE user (
 )
 
 CREATE TABLE posts (
-    id INT PRIMARY KEY
+    id CHAR(36) PRIMARY KEY
     date_posted 
     caption VARCHAR(150)
     views DECIMAL
@@ -28,9 +28,18 @@ CREATE TABLE posts (
 )
 
 CREATE TABLE messages (
-    id INT PRIMARY KEY
-    date_sent 
+    id CHAR(36) PRIMARY KEY
+    date_sent DATETIME
     message_content VARCHAR(150)
     sender_username INT 
     receiver_username INT 
+)
+
+CREATE TABLE interactEvents (
+    id CHAR(36)
+    namespace VARCHAR(150)
+    person INT
+    action VARCHAR(150)
+    thing VARCHAR(150)
+    expires_at DATETIME 
 )
