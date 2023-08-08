@@ -31,7 +31,7 @@ router.get('/', async (req, res) => {
       attributes: ["id", "username"],
     });
 
-    // const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((project) => project.get({ plain: true }));
 
     res.render('homepage', {
       users,
