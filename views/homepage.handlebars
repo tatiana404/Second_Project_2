@@ -1,42 +1,42 @@
- <div class="home">
-        <p>
-          {{#unless loggedIn}}
-          <a href="/login">Login</a>
-          {{/unless}}
-          <a>Home page</a>
-        </p>
- </div>
- 
+{{!-- <div class="home">
+       <p>
+         {{#unless loggedIn}}
+         <a href="/login">Login</a>
+         {{/unless}}
+         <a>Home page</a>
+       </p>
+</div> --}}
+
 <section id="page">
-			<main>
+    <main>
 
-				<article class="Post1" class="Post1">
-					<img src="./00000.jpg" class="float-left section-img" />
-					<h2>My first post</h2>
-					<p>
-						My first post  
-					</p>
-				</article>
-				
-				
-				<article id="Post2" class="Post2">
-					<img src="./00000.jpg" class="float-right section-img" />
-					<h2>My second post</h2>
-					<p>
-						Here will be my second post 
-					</p>
-				</article>
+        <article class="Post1" class="Post1">
+            <img src="./00000.jpg" class="float-left section-img" />
+            <h2>My first post</h2>
+            <p>
+                My first post
+            </p>
+        </article>
 
-				<div id="tweet-form">
-					<textarea id="tweet-text" placeholder="Compose your tweet..."></textarea>
-					<button id="tweet-button">Tweet</button>
-				</div>
-				<div id="timeline">
-				</div>
-			
-			</main>			
 
-		</section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="app.js"></script>
+        <article id="Post2" class="Post2">
+            <img src="./00000.jpg" class="float-right section-img" />
+            <h2>My second post</h2>
+            <p>
+                Here will be my second post
+            </p>
+        </article>
+
+        <div id="tweet-form">
+            <textarea id="tweet-text" placeholder="Compose your tweet..."></textarea>
+            <button id="tweet-button">Tweet</button>
+        </div>
+        <div id="timeline">
+        </div>
+
+    </main>
+
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app.js"></script>
     
