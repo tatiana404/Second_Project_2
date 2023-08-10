@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const interactEvent = require('./interactEvent');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -73,5 +74,15 @@ User.init(
     modelName: 'User',
   }
 );
+
+User.hasOne(interactEvent, {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+})
 
 module.exports = User;

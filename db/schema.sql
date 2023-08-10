@@ -36,7 +36,7 @@ CREATE TABLE messages (
 )
 
 CREATE TABLE interactEvents (
-    id CHAR(36)
+    id CHAR(36) PRIMARY KEY
     namespace VARCHAR(150)
     person INT
     action VARCHAR(150)
