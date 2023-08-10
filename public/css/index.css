@@ -1,7 +1,8 @@
 html,body,div,h2,p,img,strong,article,aside,header,menu,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 body{
     line-height:1;
-    font-family:sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    color: #030366;
 }
 h2 {
     font-size:25px;
@@ -9,18 +10,22 @@ h2 {
 }
 
 h1 {
-    font-size:25px;
-    color: white;
+    font-size:35px;
+    color: #030366;
 }
 
 
 body,html{
-    background-color: #272758
+    min-height: 100%;
+    height: 100%;
+}
+html {
+  background-color: #272758;
+  background: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=1480&t=st=1691624824~exp=1691625424~hmac=7a9beea863756a469468978854c873dd9d6ab082a0e416f3b117d1c44494525a") center center no-repeat;
+  background-size: cover;
 }
 header{
-    background:#272758;
-    padding:30px 30px;
-    margin:auto;
+    background:transparent;
     position:fixed;
     left:0;
     right:0;
@@ -30,8 +35,10 @@ header{
 }
 
 main {
-    padding: 40px; 
-    margin-top: 50px; 
+}
+
+.home {
+  padding: 0 20px;
 }
 
 #tweet-form {
@@ -44,15 +51,26 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    max-width: 1100px;
   }
   
   .left-section, .user-profile {
-    flex: 1;
     padding: 10px;
   } 
+
+  .left-section {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .left-section h1 {
+    margin: 0;
+    font-size: 45px;
+  }
+
   .main-section {
-    flex: 2;
-    padding: 10px;
+    flex: 1;
+    padding: 10px 20px;
   }
   
   .user-dropdown {
@@ -62,8 +80,8 @@ main {
   }
   
   .dropdown-button {
-    background-color: #1e347d;
-    color: white;
+    background-color: #8e9cc7;
+    color: #030366;
     border: none;
     padding: 5px 10px;
     border-radius: 3px;
@@ -73,14 +91,14 @@ main {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #51509f;
+    background-color: #8e9cc7;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   .dropdown-content a {
-    color: white;
+    color: #030366;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -139,8 +157,8 @@ main {
   }
   
   #tweet-button {
-    background-color: #253878;
-    color: white;
+    background-color: #8e9cc7;
+    color: #030366;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -171,18 +189,19 @@ article h2:hover{
 }
 
 aside > div{
-    margin:10px auto;
-    background:#253878;
+    margin:0 auto;
     min-height:292px;
     padding:30px 10px;
     text-align:center;
-    color:#FFF
+    font-size: 25px;
+    color: #030366;
 }
  aside > div img {
     display: block;
     width: 100px;
     height: auto;
     margin: 30px auto;
+  
 
  }
 
@@ -191,8 +210,11 @@ aside > div{
     min-width: 0;
 }
 #wrapall{
-    padding-top:60px;
+    padding-top:100px;
     display: flex;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: silver;
 }
 
 #header{max-width:1000px;
@@ -207,10 +229,14 @@ aside > div{
     margin:0 auto
 }
 
+#wrapall {
+  height: 100%;
+}
+
 #sidebar{
     width: 207px;
     height:292px ;
-    padding: 10px;
+    padding: 0 10px;
 
 }
 
@@ -242,23 +268,28 @@ section{
 .Post1 {
     margin-bottom: 20px;
     padding: 50px;
-    height: 40px;
+    /* height: 40px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #253878;
-    color: #ffffff;
+    background-color: #8e9cc7;
+    color: #030366;
 }
 
  .Post2 {
     margin-bottom: 20px;
     padding: 50px;
-    height: 40px;
+    /* height: 40px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #253878;
-    color: #ffffff;
+    background-color: #8e9cc7;
+    color: #030366;
 }
 
 
 aside > div{
     min-height:20px;
-    padding:10px;
+}
+
+footer {
+  color: #030366;
+  font-size: 25px;
+  text-align: center;
 }
