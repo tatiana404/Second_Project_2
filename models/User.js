@@ -93,7 +93,6 @@ User.hasOne(interactEvent, {
     defaultValue: DataTypes.UUIDV4,
     allowNull: false,
     primaryKey: true,
-    autoIncrement: true,
   },
 })
 
