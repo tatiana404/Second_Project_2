@@ -12,6 +12,7 @@ class User extends Model {
 User.init(
   {
     id: {
+
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
@@ -43,35 +44,46 @@ User.init(
     },
     number_likes: {
       type: DataTypes.DECIMAL(10, 2),
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    username: {
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+            isEmail: true,
+        },
     },
     password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [6],
+        },
     },
-  },
+},
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      async beforeCreate(newUserData) {
+          newUserData.password = await bcrypt.hash(
+              newUserData.password,
+              10
+          );
+          return newUserData;
       },
-    },
+  },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'User',
+    modelName: 'user',
   }
 );
 
