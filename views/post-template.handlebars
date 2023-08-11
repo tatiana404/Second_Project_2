@@ -1,0 +1,12 @@
+{{#each post}}
+  <article class="post">
+    {{#if img}}
+      <img src="{{img}}" class="section-img" />
+    {{/if}}
+    {{#if video}}
+      <video src="{{video}}" class="video"></video>
+    {{/if}}
+    <p>{{text}}</p>
+    <p class="timestamp">{{timestamp}}</p>
+  </article>
+{{/each}}
