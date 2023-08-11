@@ -7,14 +7,6 @@ class interactEvent extends Model {
     static associate({User}) {
         this.belongsTo(User, {foreignKey: 'userId', as: 'user' })
     }
-    // constructor() {
-    //     this.id;
-    //     this.namespace = 'post',
-    //     this.person = `${userID}`,
-    //     this.action = ['like','repost','share'],
-    //     this.thing = `${postID}`,
-    //     this.expires_at = yearInFuture()
-    // }
 };
 
 interactEvent.init(
@@ -56,11 +48,4 @@ interactEvent.init(
     }
 );
 
-// interactEvent.belongsTo(User, {
-//     person: {
-//         type: DataTypes.INTEGER,
-//         allowNull: false,
-//     },
-// });
-
-module.exports = interactEvent
+module.exports = interactEvent;
