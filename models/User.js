@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
+const interactEvent = require('./interactEvent');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -11,10 +12,31 @@ class User extends Model {
 User.init(
   {
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    first_name: {
+      type: DataTypes.STRING,
+    },
+    last_name: {
+      type: DataTypes.STRING,
+    },
+    number_follower: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    number_following: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    number_tweets: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    number_replies: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    number_likes: {
+      type: DataTypes.DECIMAL(10, 2),
     },
     username: {
         type: DataTypes.STRING,
@@ -53,5 +75,14 @@ User.init(
     modelName: 'user',
   }
 );
+
+User.hasOne(interactEvent, {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+  },
+})
 
 module.exports = User;

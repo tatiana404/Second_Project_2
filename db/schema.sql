@@ -14,6 +14,7 @@ CREATE TABLE user (
     number_tweets DECIMAL
     number_replies DECIMAL
     number_likes DECIMAL
+    username VARCHAR(15)
 )
 
 CREATE TABLE posts (
