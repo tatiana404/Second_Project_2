@@ -3,60 +3,55 @@
 
 <head>
 
-	<title>AGORA</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ad</title>
-	<link rel="stylesheet" type="text/css" href="/css/jass.css">
-	<link rel="stylesheet" type="text/css" href="/css/index.css">
+    <title>AGORA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGORA</title>
+    <link rel="stylesheet" type="text/css" href="/css/jass.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
 
 </head>
 
 <body>
 
-	<header>
-		<div class="container">
-			<div class="left-section">
-				<div class="About">
-					<h1>AGORA</h1>
-				</div>
-			</div>
-			<div class="main-section">
-				{{!-- <div class="search-container">
-					<input type="text" class="search-input" placeholder="Search...">
-				</div> --}}
-			</div>
-			<div class="user-profile">
-				{{!-- <img class="user-avatar" src="user-avatar.jpg" alt="User Avatar"> --}}
+<header>
+    <div class="left-section">
+        <div class="About">
+            <h1>AGORA</h1>
+        </div>
+    </div>
+    <div class="main-section">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+        </div>
+    </div>
+    <div class="user-profile">
+        <img class="user-avatar" src="user-avatar.jpg" alt="User Avatar">
 
-				<div class="user-dropdown">
-					<button class="dropdown-button">User Options</button>
-					<div class="dropdown-content">
-						<a href="#">Home Page</a>
-						<a href="#">Login</a>
-						<a href="#">Logout</a>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="user-dropdown">
+            <button class="dropdown-button">User Options</button>
+            <div class="dropdown-content">
+                <a href="/">Home page</a>
+                <a href="/login">Login</a>
+                <a href="/signup">Signup</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div id="wrapall">
+    <div id="sidebar">
 
-	</header>
-	<div id="wrapall">
-		<div id="sidebar">
+        <aside>
+            <div>some info <img src="./00000.jpg"> </div>
 
-			<aside>
-				<div>Agora, in ancient Greek cities, an open space that served as a meeting ground for various activities of the citizens. In our Agora website you can - I will add some idea here <img src="/css/agora.jpg"> </div>
-			</aside>
-		</div>
-		<div id="main">
-			{{{ body }}}
-		</div>
-	</div>
-	<script src="../../public/app.js"></script>
+        </aside>
+    </div>
+    <div id="main">
+        {{{ body }}}
+    </div>
+</div>
+<script src="../../public/app.js"></script>
 
-	<footer class="footer">
-		<p>&copy; HERE IS SOME NICE FOOTER</p>
-	</footer>
 </body>
 
 </html>
