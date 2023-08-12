@@ -12,23 +12,16 @@ class User extends Model {
 User.init(
   {
     id: {
-
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     first_name: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     last_name: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    user_location: {
-      type: DataTypes.INTEGER,
     },
     number_follower: {
       type: DataTypes.DECIMAL(10, 2),
@@ -44,10 +37,6 @@ User.init(
     },
     number_likes: {
       type: DataTypes.DECIMAL(10, 2),
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
     },
     username: {
         type: DataTypes.STRING,
@@ -86,14 +75,5 @@ User.init(
     modelName: 'user',
   }
 );
-
-User.hasOne(interactEvent, {
-  id: {
-    type: DataTypes.UUID,
-    defaultValue: DataTypes.UUIDV4,
-    allowNull: false,
-    primaryKey: true,
-  },
-})
 
 module.exports = User;

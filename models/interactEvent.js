@@ -4,27 +4,30 @@ const { yearInFuture, } = require('../helpers/dateHelpers');
 const User = require('./User');
 
 class interactEvent extends Model {
-    constructor() {
-        this.id;
-        this.namespace = 'post',
-        this.person = `${userID}`,
-        this.action = ['like','repost','share'],
-        this.thing = `${postID}`,
-        this.expires_at = yearInFuture()
+    static associate({User}) {
+        this.belongsTo(User, {foreignKey: 'userId', as: 'user' })
     }
 };
 
 interactEvent.init(
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            type: DataTypes.INTEGER,
+            defaultValue: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
         },
+        userId: {
+            allowNull: false,
+            type: DataTypes.INTEGER
+          },
         namespace:{
             type: DataTypes.STRING,
+            allowNull: false,
+        },
+        person: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         action:{
@@ -45,11 +48,4 @@ interactEvent.init(
     }
 );
 
-interactEvent.belongsTo(User, {
-    person: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-});
-
-module.exports = interactEvent
+module.exports = interactEvent;
