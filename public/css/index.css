@@ -1,7 +1,7 @@
 html,body,div,h2,p,img,strong,article,aside,header,menu,section{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 body{
     line-height:1;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #030366;
 }
 h2 {
@@ -9,8 +9,13 @@ h2 {
     text-align:center;
 }
 
+p {
+  font-size: 20px;
+}
+
 h1 {
-    font-size:35px;
+    font-size:55px;
+    height: 45px;
     color: #030366;
 }
 
@@ -18,40 +23,30 @@ h1 {
 body,html{
     min-height: 100%;
     height: 100%;
+    
 }
 html {
   background-color: #272758;
-  background: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=1480&t=st=1691624824~exp=1691625424~hmac=7a9beea863756a469468978854c873dd9d6ab082a0e416f3b117d1c44494525a") center center no-repeat;
+  background: url("https://img.freepik.com/premium-photo/soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1093.jpg") center center no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
 }
 header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background:transparent;
-    padding:30px 30px;
-    /* margin:auto;
-
     position:fixed;
     left:0;
     right:0;
     top:0;
     z-index:999;
-    height:90px */
-}
-
-main {
+    height:150px
 }
 
 .home {
   padding: 0 20px;
 }
 
-#tweet-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
   
   .container {
     display: flex;
@@ -60,25 +55,12 @@ main {
     max-width: 1100px;
   }
   
-  .left-section, .user-profile {
-    padding: 10px;
-  } 
 
   .left-section {
     display: inline-flex;
     align-items: center;
   }
 
-  .left-section h1 {
-    margin: 0;
-    font-size: 45px;
-  }
-
-  .main-section {
-    flex: 1;
-    padding: 10px 20px;
-  }
-  
   .user-dropdown {
     position: relative;
     display: inline-block;
@@ -86,18 +68,19 @@ main {
   }
   
   .dropdown-button {
-    background-color: #8e9cc7;
+    background-color: transparent;
     color: #030366;
     border: none;
     padding: 5px 10px;
     border-radius: 3px;
     cursor: pointer;
+ 
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #8e9cc7;
+    background-color:transparent;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -111,28 +94,11 @@ main {
   }
   
   .dropdown-content a:hover {
-    background-color: rgb(69, 151, 228);
+    background-color: #aad0a2;
   }
   
   .user-dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-  .search-container {
-    display: flex;
-    align-items: center;
-    background-color: #253878;
-    padding: 10px;
-    border-radius: 5px;
-
-  }
-  
-  .search-input {
-    width: 100%;
-    background-color: #253878;
-    padding: 8px;
-    border: none;
-    border-radius: 3px;
   }
   
   .info-section {
@@ -146,35 +112,31 @@ main {
     align-items: center;
   }
   
-  .user-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-  }
-
-  #tweet-text {
+  #textInput {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 12px;
     resize: vertical;
+    width: 550px;
+    height: 80px;
   }
   
-  #tweet-button {
-    background-color: #8e9cc7;
+  #submit {
+    background-color: #aad0a2;
     color: #030366;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 10px;
     cursor: pointer;
+    width: 100px;
+    height: 60px;
   }
 article{
-    border-bottom:2px dotted #998;
+
     padding-bottom:20px;
     margin-bottom:20px;
-    overflow:hidden 
+    overflow:hidden; 
 }
 
 article h2{
@@ -182,12 +144,7 @@ article h2{
     margin-bottom:12px;
     
 }
-article h2:hover{
-    color:#e4e3e3;
-    background:rgb(48, 44, 108)
 
-
-} 
 .section-img{
     display: block;
     width: 100px;
@@ -197,7 +154,7 @@ article h2:hover{
 aside > div{
     margin:0 auto;
     min-height:292px;
-    padding:30px 10px;
+    padding:10px 10px;
     text-align:center;
     font-size: 25px;
     color: #030366;
@@ -256,41 +213,7 @@ section{
     text-align: center;
 }
 
-.sidebarToggle #main{
-    margin-left:0
-
-}
-
-.Post1 {
-    margin-bottom: 20px;
-    padding: 50px;
-    /* height: 40px; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #8e9cc7;
-    color: #030366;
-}
-
- .Post2 {
-    margin-bottom: 20px;
-    padding: 50px;
-    /* height: 40px; */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #8e9cc7;
-    color: #030366;
-}
-
-
-aside > div{
-    min-height:20px;
-}
-
-    padding:10px;
-}
-
 .container-auth {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: black;
     border-radius: 15px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -301,56 +224,90 @@ aside > div{
     min-height: 650px;
 }
 
-.login-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 8rem;
-    height: 100%;
-    text-align: center;
+aside > div{
+    min-height:20px;
 }
 
-.question-to-sign-up {
-    color: rgb(113, 118, 123);
+footer {
+  color: #030345;
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5px 0;
 }
 
-.sign-up-link {
-    color: rgb(29, 155, 240);
+
+.container { 
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px; 
+  display: flex; 
+  flex-direction: column;
+} 
+
+#inputForm {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.inputContainer {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  
 }
 
-a:hover {
-    color: rgb(29, 155, 240);
-    cursor: pointer;
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
-span {
-    font-size: 12px;
+.likeButton, .shareButton, .commentsButton {
+  padding: 5px 10px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
+.likeButton:hover, .shareButton:hover, .commentsButton:hover {
+  background-color: #ddd;
 }
 
-.login-button {
-    display: block;
-    margin: 0 auto;
-
-    font-size: 14px;
-    font-weight: bold;
-    width: 100%;
-    height: 34px;
-    background-color:  rgb(239, 243, 244);
-    border-radius: 30px;
-    border: 1px solid  rgb(239, 243, 244);
-    transition: 400ms;
-    text-align: center;
+.emojiContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
 }
 
-.login-button:hover {
-    cursor: pointer;
+.emojiWithCounter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
+
+.likeEmoji, .shareEmoji, .commentsEmoji {
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+
+.likeCounter {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.commentsDropdown {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-top: 5px;
+}
+
 
