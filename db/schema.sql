@@ -3,7 +3,7 @@ Create DATABASE inventory_db;
 
 USE inventory_db;
 
-CREATE TABLE user (
+CREATE TABLE users (
     id CHAR(36) PRIMARY KEY,
     first_name VARCHAR(15),
     last_name VARCHAR(15),
@@ -21,26 +21,32 @@ CREATE TABLE posts (
     id CHAR(36) PRIMARY KEY,
     date_posted DATETIME,
     caption VARCHAR(150),
+    userID CHAR(36),
     views DECIMAL,
     likes DECIMAL,
     replies DECIMAL,
     retweets DECIMAL,
     number_shares DECIMAL,
+    FOREIGN KEY (userID) REFERENCES users(id)
 );
 
-CREATE TABLE messages (
+CREATE TABLE comments (
     id CHAR(36) PRIMARY KEY,
     date_sent DATETIME,
     message_content VARCHAR(150),
-    sender_username INT,
-    receiver_username INT,
+    senderID CHAR(36),
+    postID CHAR(36),
+    FOREIGN KEY (senderID) REFERENCES users(id),
+    FOREIGN KEY (postID) REFERENCES posts(id)
 );
 
 CREATE TABLE interactEvents (
     id CHAR(36) PRIMARY KEY,
     namespace VARCHAR(150),
-    person INT,
+    person CHAR(36),
     action VARCHAR(150),
-    thing VARCHAR(150),
+    thing CHAR(36),
     expires_at DATETIME,
+    FOREIGN KEY (person) REFERENCES users(id),
+    FOREIGN KEY (thing) REFERENCES posts(id)
 );
