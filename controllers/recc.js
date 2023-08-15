@@ -52,8 +52,7 @@ ger.initialize_namespace('posts')
     return ger.recommendations_for_person('posts',userID, {
         'actions': {
             'like': 1,
-            'repost': 3,
-            'share': 5,
+            'comment': 3,
         }
     })
 })

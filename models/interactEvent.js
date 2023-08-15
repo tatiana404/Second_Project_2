@@ -1,11 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { yearInFuture, } = require('../helpers/dateHelpers');
+
 const User = require('./User');
+const Post = require('./Post')
 
 class interactEvent extends Model {
-    static associate({User}) {
-        this.belongsTo(User, {foreignKey: 'userId', as: 'user' })
+    static associate() {
+        this.belongsTo(User, {foreignKey: 'person', as: 'user' })
+        this.belongsTo(Post, {foreignKey: 'thing', as: 'Post' })
+        
     }
 };
 
@@ -18,15 +21,15 @@ interactEvent.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        userId: {
-            allowNull: false,
-            type: DataTypes.INTEGER
-          },
         namespace:{
             type: DataTypes.STRING,
             allowNull: false,
         },
         person: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        thing: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
