@@ -26,8 +26,7 @@ CREATE TABLE posts (
     likes DECIMAL,
     replies DECIMAL,
     retweets DECIMAL,
-    number_shares DECIMAL,
-    FOREIGN KEY (userID) REFERENCES users(id)
+    number_shares DECIMAL
 );
 
 CREATE TABLE comments (
@@ -35,9 +34,7 @@ CREATE TABLE comments (
     date_sent DATETIME,
     message_content VARCHAR(150),
     senderID CHAR(36),
-    postID CHAR(36),
-    FOREIGN KEY (senderID) REFERENCES users(id),
-    FOREIGN KEY (postID) REFERENCES posts(id)
+    postID CHAR(36)
 );
 
 CREATE TABLE interactEvents (
@@ -46,7 +43,5 @@ CREATE TABLE interactEvents (
     person CHAR(36),
     action VARCHAR(150),
     thing CHAR(36),
-    expires_at DATETIME,
-    FOREIGN KEY (person) REFERENCES users(id),
-    FOREIGN KEY (thing) REFERENCES posts(id)
+    expires_at DATETIME
 );
