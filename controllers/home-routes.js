@@ -24,6 +24,7 @@ const { User } = require('../models');
 //   }
 // });
 
+
 router.get('/', async (req, res) => {
   try {
     const userData = await User.findAll({
