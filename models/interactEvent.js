@@ -4,8 +4,8 @@ const { yearInFuture, } = require('../helpers/dateHelpers');
 const User = require('./User');
 
 class interactEvent extends Model {
-    static associate({User}) {
-        this.belongsTo(User, {foreignKey: 'userId', as: 'user' })
+    static associate() {
+        this.belongsTo(User, {foreignKey: 'person', as: 'user' })
     }
 };
 
@@ -18,10 +18,6 @@ interactEvent.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        userId: {
-            allowNull: false,
-            type: DataTypes.INTEGER
-          },
         namespace:{
             type: DataTypes.STRING,
             allowNull: false,
