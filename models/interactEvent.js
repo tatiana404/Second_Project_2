@@ -7,8 +7,9 @@ const Post = require('./Post')
 class interactEvent extends Model {
     static associate() {
         this.belongsTo(User, {foreignKey: 'person', as: 'user' })
+
         this.belongsTo(Post, {foreignKey: 'thing', as: 'Post' })
-        
+
     }
 };
 

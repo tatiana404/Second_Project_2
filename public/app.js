@@ -144,6 +144,18 @@ function createEmojis() {
         const updatedLikeCount = currentLikeCount + 1;
         likeCounter.textContent = updatedLikeCount;
 
+        // interactevent handling
+        async () => {
+            const userID = session.userID
+            const thing = e.target.className
+            const action = 'like'
+
+            const response = await fetch('/api/recc', {
+                method: 'POST',
+                body: JSON.stringify({ userID, thing, action }),
+                headers: { 'Content-Type': 'application/json' },
+            })
+        }
 
         // Update the like counter in emojiData and save to local storage
         const inputContainer = likeContainer.closest(".inputContainer");
